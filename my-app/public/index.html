@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archers Market - DLSU Student Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="practice">
+        <div class="practice-background"></div> 
+        <div class="practice-content">
+            <h1>Your Trusted DLSU Student Marketplace</h1>
+            <p>Buy and sell textbooks, clothes, and more within the DLSU community</p>
+            <div class="practice-buttons">
+                <button class="btn-secondary">Start Shopping</button>
+                <button class="btn-secondary">Post an Item</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="categories">
+        <h2>Popular Categories</h2>
+        <div class="category-grid">
+            <div class="category-card" data-category="textbooks">
+                <div class="category-icon">📚</div>
+                <h3>Textbooks</h3>
+                <p>New and used course materials</p>
+            </div>
+            <div class="category-card" data-category="clothes">
+                <div class="category-icon">👕</div>
+                <h3>Clothes</h3>
+                <p>Clothes and other school merchandise</p>
+            </div>
+            <div class="category-card" data-category="supplies">
+                <div class="category-icon">🔧</div>
+                <h3>School Supplies</h3>
+                <p>Calculators, drawing sets & more</p>
+            </div>
+            <div class="category-card" data-category="electronics">
+                <div class="category-icon">💻</div>
+                <h3>Electronics</h3>
+                <p>Laptops, tablets & accessories</p>
+            </div>
+            <div class="category-card" data-category="others">
+                <div class="category-icon">🚀</div>
+                <h3>Others</h3>
+            </div>
+        </div>
+    </section>
+
+    <section class="listings">
+        <h2>Recent Listings</h2>
+        <div class="listings-grid" id="recentListings">
+        </div>
+    </section>
+
+    <div id="footer"></div>
+
+    <div class="modal" id="loginModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Sign In</h2>
+            <form id="loginForm">
+                <div class="form-group">
+                    <label for="email">DLSU Email</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" required>
+                </div>
+                <button type="submit" class="btn-primary">Sign In</button>
+            </form>
+        </div>
+    </div>
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer').innerHTML = data;
+            });
+    </script>
+    <script src="script.js" defer></script>
+</body>
+</html>

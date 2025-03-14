@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browse Items - Archers Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <section class="browse-section">
+        <h2>Items for Sale</h2>
+
+        <div class="search-filter">
+            <input type="text" id="searchBar" placeholder="Search items...">
+            <select id="categoryFilter">
+                <option value="all">All Categories</option>
+                <option value="textbooks">Textbooks</option>
+                <option value="clothes">Clothes</option>
+                <option value="supplies">School Supplies</option>
+                <option value="electronics">Electronics</option>
+            </select>
+        </div>
+
+        <div class="listings-grid" id="browseListings">
+        </div>
+    </section>
+
+    <div id="footer-container"></div>
+
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('navbar-container').innerHTML = html);
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(html => document.getElementById('footer-container').innerHTML = html);
+    </script>
+
+    <script src="script.js" defer></script>
+</body>
+</html>

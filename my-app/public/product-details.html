@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details - Archers Market</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="header"></div>
+
+    <div class="back-navigation">
+        <a href="browse.html">← Back to Browse</a>
+    </div>
+
+    <section class="product-details">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> > 
+            <a href="browse.html">Browse</a> > 
+            <span class="current-page">Product Details</span>
+        </div>
+
+        <div class="product-container">
+            <div class="product-images">
+                <div class="main-image">
+                    <img src="/api/placeholder/600/400" alt="Product Image" id="mainProductImage">
+                </div>
+                <div class="image-thumbnails">
+                    <img src="/api/placeholder/100/100" alt="Thumbnail 1" class="thumbnail active">
+                    <img src="/api/placeholder/100/100" alt="Thumbnail 2" class="thumbnail">
+                    <img src="/api/placeholder/100/100" alt="Thumbnail 3" class="thumbnail">
+                </div>
+            </div>
+            
+            <div class="product-info">
+                <div class="product-header">
+                    <h1>Product Title</h1>
+                    <div class="price">Price</div>
+                    <div class="condition">Condition</div>
+                    <div class="category-tag">Category</div>
+                </div>
+
+                <div class="product-status">
+                    <span class="status-badge available">Available</span>
+                    <span class="post-date">Posted on Feb 15, 2025</span>
+                </div>
+                
+                <div class="product-description">
+                    <h2>Description</h2>
+                    <p>Product description will be loaded here</p>
+                    
+                    <div class="product-specifications">
+                        <h3>Details</h3>
+                        <ul class="product-details-list">
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="seller-info">
+                    <h2>Seller Information</h2>
+                    <div class="seller-profile">
+                        <img src="/api/placeholder/50/50" alt="Seller Profile" class="seller-image">
+                        <div class="seller-details">
+                            <h3>Seller Name</h3>
+                            <p class="seller-program">Program</p>
+                            <p class="member-since">Member since</p>
+                            <div class="seller-rating">
+                                <span class="stars">★★★★★</span>
+                                <span class="rating-count">(5 transactions)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button class="btn-primary" id="messageSellerBtn">
+                        <span class="icon">✉</span> Message Seller
+                    </button>
+                    <button class="btn-secondary" id="saveItemBtn">
+                        <span class="icon">♡</span> Save Item
+                    </button>
+                    <button class="btn-secondary" id="shareItemBtn">
+                        <span class="icon">↗</span> Share
+                    </button>
+                </div>
+
+                <div class="safety-notice">
+                    <h3>Safety Guidelines</h3>
+                    <ul>
+                        <li>✓ Meet in designated campus trading areas</li>
+                        <li>✓ Verify items before payment</li>
+                        <li>✓ Use DLSU email for communication</li>
+                        <li>✓ Report suspicious behavior</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="reportModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Report Item</h2>
+            <form id="reportForm">
+                <div class="form-group">
+                    <label for="reportReason">Reason for reporting:</label>
+                    <select id="reportReason" required>
+                        <option value="">Select a reason</option>
+                        <option value="fake">Counterfeit/Fake item</option>
+                        <option value="inappropriate">Inappropriate content</option>
+                        <option value="scam">Potential scam</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reportDescription">Description:</label>
+                    <textarea id="reportDescription" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Submit Report</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
